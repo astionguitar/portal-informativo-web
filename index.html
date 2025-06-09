@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clima, Gato e Curiosidades</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- 🔍 Campo de busca -->
+    <div class="busca">
+      <input type="text" id="cidade" placeholder="Digite uma cidade..." />
+      <button onclick="buscarClima()">Buscar Clima</button>
+    </div>
+
+    <!-- 🌦️ Clima -->
+    <div class="bloco bloco-clima">
+      <h2>🌦️ Clima</h2>
+      <div id="resultado-clima">Digite uma cidade para ver o clima.</div>
+    </div>
+
+    <!-- 🐱 Gato -->
+    <div class="bloco bloco-gato">
+      <h2>🐱 Gato do Dia</h2>
+      <div id="resultado-gato">Carregando gatinho fofo...</div>
+    </div>
+
+    <!-- 🔄 Carrossel com cotação, feriado, lua, notícia, curiosidade -->
+    <div class="bloco bloco-carrossel">
+      <h2>🔄 Informações</h2>
+      <div class="carrossel">
+        <div class="item-carrossel" id="resultado-cotacao">💱 Cotação</div>
+        <div class="item-carrossel" id="resultado-feriado">📅 Feriado</div>
+        <div class="item-carrossel" id="resultado-lua">🌙 Fase da Lua</div>
+        <div class="item-carrossel" id="resultado-noticia">📰 Notícia</div>
+        <div class="item-carrossel" id="resultado-curiosidade">🧠 Curiosidade</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

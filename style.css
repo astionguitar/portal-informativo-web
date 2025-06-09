@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+  }
+  
+  /* Container geral */
+  .container {
+    display: grid;
+    grid-template-areas:
+      "busca busca"
+      "clima gato"
+      "carrossel carrossel";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Campo de busca */
+  .busca {
+    grid-area: busca;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .busca input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .busca button {
+    padding: 10px 20px;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .busca button:hover {
+    background-color: #1565c0;
+  }
+  
+  /* Blocos */
+  .bloco {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .bloco h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Clima e gato */
+  .bloco-clima {
+    grid-area: clima;
+  }
+  
+  .bloco-gato {
+    grid-area: gato;
+  }
+  
+  .bloco-gato img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Carrossel */
+  .bloco-carrossel {
+    grid-area: carrossel;
+    overflow: hidden;
+    position: relative;
+    height: 120px;
+  }
+  
+  .carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .item-carrossel {
+    min-width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-areas:
+        "busca"
+        "clima"
+        "gato"
+        "carrossel";
+      grid-template-columns: 1fr;
+    }
+  }
+  
